@@ -9,6 +9,11 @@ A LangChain-based pipeline that fetches YouTube transcripts using the native Pyt
 
 ![YouTube ChatApp Interface](screenshots/Sample_1.png)
 
+## Architecture:
+
+- **Production-Ready Modular Structure**: Separates research and frontend presentation into dedicated files (`src/app.py` for Streamlit UI and `src/chain.py` for backend execution).
+- **Session State Token Optimization**: Utilizes Streamlit's `st.session_state` to cache the generated FAISS retriever object across application re-runs. This ensures the text transcription and embedding vector database are only calculated **once** per video URL, completely preventing API token wastage on subsequent user questions.
+- **Parallel Execution Logic (LCEL)**: Employs true LangChain Expression Language via `RunnableParallel`, `RunnablePassthrough`, and `RunnableLambda` to fetch vector context dynamically and forward variables natively to the language model in parallel pipeline pathways.
 
 ## Installation
 
@@ -25,6 +30,7 @@ pip install -r requirements.txt
 ```
 
 ## Project Structure
-- `main.ipynb`: Core notebook containing the manual transcript loader, text splitter, vector store setup, and retriever loop.
-- `.gitignore`: Configured to exclude system files, local FAISS indexes, and environments.
-
+- `src/app.py`: Streamlit main dashboard layout, page configurations, and state handling.
+- `src/chain.py`: Isolated computational LCEL processing, vector generation, and video loading utilities.
+- `main.ipynb`: Laboratory notebook for rapid testing, prototyping, and validation tracking.
+- `.gitignore`: Configured to exclude local system files, local FAISS indexes, and specific key files.

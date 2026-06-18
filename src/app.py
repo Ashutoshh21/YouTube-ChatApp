@@ -10,11 +10,7 @@ st.title("📺 YouTube Video ChatApp")
 if "retriever" not in st.session_state:
     st.session_state.retriever = None
 
-# 3. Sidebar UI (Indexing Pipeline)
-with st.sidebar:
-    st.header("Setup")
-    url_input = st.text_input("Enter YouTube URL:")
-    process_button = st.button("Index Video")
+# 3. Sidebar UI (Indexing button("Index Video")
 
     if process_button and url_input:
         with st.spinner("Processing Video..."):
