@@ -34,3 +34,6 @@ pip install -r requirements.txt
 - `src/chain.py`: Isolated computational LCEL processing, vector generation, and video loading utilities.
 - `main.ipynb`: Laboratory notebook for rapid testing, prototyping, and validation tracking.
 - `.gitignore`: Configured to exclude local system files, local FAISS indexes, and specific key files.
+
+### Note
+cloud live link is subject to YouTube's server-side data center blocks.
