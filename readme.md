@@ -15,6 +15,19 @@ A LangChain-based pipeline that fetches YouTube transcripts using the native Pyt
 - **Session State Token Optimization**: Utilizes Streamlit's `st.session_state` to cache the generated FAISS retriever object across application re-runs. This ensures the text transcription and embedding vector database are only calculated **once** per video URL, completely preventing API token wastage on subsequent user questions.
 - **Parallel Execution Logic (LCEL)**: Employs true LangChain Expression Language via `RunnableParallel`, `RunnablePassthrough`, and `RunnableLambda` to fetch vector context dynamically and forward variables natively to the language model in parallel pipeline pathways.
 
+
+## 📺 App Demonstration
+
+Since YouTube actively restricts cloud hosting provider IPs (like AWS/Streamlit Cloud) from fetching video transcripts at scale, this project is optimized to run as a local productivity tool.
+
+Check out the full workflow in action below:
+
+👉 **[Click Here to Watch the Live Demo Video](<https://youtu.be/gW4HcYMZvoc>)**
+
+*Note: You can easily run this app locally by following the installation instructions below.*
+
+
+
 ## Installation
 
 1. Clone the repository:
