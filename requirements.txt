@@ -1,4 +1,4 @@
-youtube-transcript-api==0.6.3
+youtube-transcript-api>=1.2.4
 langchain-core>=0.1.0
 langchain-text-splitters>=0.0.1
 langchain-huggingface>=0.0.1
