@@ -7,6 +7,9 @@ A LangChain-based pipeline that fetches YouTube transcripts using the native Pyt
 - Robust YouTube video ID parser handling standard, short, and shorts URLs.
 - Local vector storage using FAISS and HuggingFace Embeddings (`all-MiniLM-L6-v2`).
 
+![YouTube ChatApp Interface](screenshots/Sample_1.png)
+
+
 ## Installation
 
 1. Clone the repository:
